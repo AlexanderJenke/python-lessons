@@ -12,7 +12,7 @@ class Computer:
 
 class Laptop(Computer):
     def __init__(self):
-        super().__init__()
+        super().__init__()  # Der Laptop ist ein Computer, deswegen  muss auch der Computer initialisiert werden.
         print("new Laptop")
 
     def get_akkustand(self):
