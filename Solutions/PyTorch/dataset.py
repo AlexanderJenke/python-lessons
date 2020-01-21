@@ -11,7 +11,8 @@ class MNIST(torch.utils.data.Dataset):
 
         for label in tqdm(range(10), desc="loading dataset"):
             for file in os.listdir(os.path.join(path, f"{label}")):
-                if not file.endswith(".jpg"): continue
+                if not file.endswith(".jpg"):
+                    continue
 
                 with open(os.path.join(path, f"{label}", file), "rb") as fd:
                     img = Image.open(fd)
